@@ -3,12 +3,14 @@
 #define altura 11 
 #define largura 13
 
+typedef char minado[2][altura][largura];
 
-void printmine(char campo[2][altura][largura]);
 
+void printmine(minado campo);
+void joga();
 
 int main(){
-	char campo[2][altura][largura];
+	minado campo;
 	int i, j;
 	for(i=0;i<altura;i++)
 		for(j=0;j<largura;j++)
@@ -22,7 +24,7 @@ int main(){
 
 
 
-void printmine(char campo[2][altura][largura]){
+void printmine(minado campo){
 	int i, j;
 	printf("   ");
 	for(j=0;j<largura;j++)
